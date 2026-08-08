@@ -18,7 +18,7 @@ mongoose.connect(MONGO_URI)
 const contactoSchema = new mongoose.Schema({
     nombre: { type: String, required: true },
     correo: { type: String, required: true },
-    checklist: { type: Boolean, default: 'yes' },
+    checklist: { type: String, default: 'no' },
     descripcion: { type: String, required: true },
 });
 

@@ -21,7 +21,7 @@ const manejarCambio = (e) => {
     });
 };
 
-const manejarEnvio = (e) => {
+async function manejarEnvio (e) {
     e.preventDefault();
 
     try{
