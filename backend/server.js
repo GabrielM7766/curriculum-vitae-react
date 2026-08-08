@@ -8,11 +8,11 @@ app.use(cors());
 app.use(express.json());
 
 
-const MONGO_URI = 'mongodb+srv://gabrielm78_db_user:<JoN8pv8gsNDslVMg>@cluster0.iwdcipa.mongodb.net/?appName=Cluster0';
+const MONGO_URI = 'mongodb+srv://gabrielm78_db_user:gBsSmRgCpSjeje@cluster0.iwdcipa.mongodb.net/?appName=Cluster0';
 
 mongoose.connect(MONGO_URI)
     .then(() => console.log('Conectado con éxito a MongoDB Atlas (Nube)'))
-    .catch((err) => console.error('Error al conectar',error));
+    .catch((err) => console.error('Error al conectar', err));
 
 // Esquema del Formulario
 const contactoSchema = new mongoose.Schema({

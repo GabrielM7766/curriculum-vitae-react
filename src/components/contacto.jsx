@@ -1,12 +1,18 @@
 import { useState } from 'react'
 
 function Contacto({ alVolver }){
-    const [formData, setFormData] = useState({
+    const estadoInicial = {
         nombre: '',
         correo: '',
         checklist: '',
         descripcion: ''
-});
+};
+
+
+const [formData, setFormData] = useState(estadoInicial);
+const [mensajeEnviado, setMensajeEnviado] = useState(false);
+
+
 
 const manejarCambio = (e) => {
     setFormData({
@@ -17,12 +23,43 @@ const manejarCambio = (e) => {
 
 const manejarEnvio = (e) => {
     e.preventDefault();
-    console.log('Datos listos para enviar:', formData);
+
+    try{
+        const respuesta = await fetch('http://localhost:5000/api/contacto', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        if (respuesta.ok) {
+            setMensajeEnviado(true);
+
+            setFormData(estadoInicial);
+
+            setTimeout(() => {
+                setMensajeEnviado(false);
+            },4000);
+
+        } else {
+            alert('Hubo un problema al guardar el mensaje');
+        }
+    }catch (error) {
+        console.error('Error al conectar con el servidor:', error);
+        alert('No se pudo conectar con el servidor backend')
+    }
 };
 
 return (
     <div>
     <h2>Contacto</h2>
+
+    {mensajeEnviado &&(
+    <div style={{ color: 'green', marginBottom: '15px', fontWeight: 'bold'}}>
+        ¡ Su mensaje ha sido enviado correctamente !
+    </div>
+    )}
 
     <form onSubmit={manejarEnvio}>
         <div>
@@ -84,6 +121,7 @@ return (
         </div>
 
         <button type="submit">Enviar Mensaje</button>
+        
         </form>
 
         <br />
