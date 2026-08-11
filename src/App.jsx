@@ -1,24 +1,52 @@
 import { useState } from 'react'
+import Inicio from './components/inicio.jsx'
 import Perfil from './components/perfil.jsx'
 import Estudios from './components/estudios.jsx';
 import Experiencia from './components/experiencia.jsx';
 import Habilidades from './components/habilidades.jsx';
 import Contacto from './components/contacto.jsx';
+import './App.css'
 
 function App() {
-  const [seccion, setSeccion] = useState('menu');
+  const [seccion, setSeccion] = useState('inicio');
+
+  const renderSeccion = () => {
+    switch (seccion) {
+      case 'inicio':
+        return<Inicio />
+      case 'perfil':
+        return <Perfil />
+      case 'estudios':
+        return <Estudios />
+      case 'experiencia':
+        return <Experiencia />
+      case 'habilidades':
+        return <Habilidades />
+      case 'contacto':
+        return <Contacto />
+      default:
+        return null;
+    }
+  };
   return(
-    <div>
-      {seccion === 'menu' && (
-        <div>
-          <header class="Cabecera">
-            <p>Gabriel Santiago Melo González -- 
-            <a href="https://github.com/GabrielM7766/curriculum-vitae-react">Enlace Github</a></p>
+        <div className='app-container'>
+          <header className='Cabecera'>
+            <button onClick={() => setSeccion('inicio')}>
+              Inicio
+            </button>
+
+          <span className='header_txt'>
+            Gabriel Santiago Melo González
+          </span>
+
+          <a className='link-github' href="https://github.com/GabrielM7766/curriculum-vitae-react" target='_blank' rel="noreferrer">
+            Enlace Github
+          </a>
           </header>
-        <div>
-            <h1>Gabriel Santiago Melo González</h1>
-            <p>Aprendiz en Desarrollo de Software</p>
-        </div>
+
+        <div className='app-body' style={{ display: 'flex'}}>
+
+        <div className='sidebar-main'>
           <nav>
             <button onClick={() => setSeccion('perfil')}>
               Perfil profesional
@@ -40,18 +68,20 @@ function App() {
               Contacto
             </button>
           </nav>
-
         </div>
-      )}
 
-      {seccion === 'perfil' && <Perfil alVolver={() => setSeccion('menu')} />}
-      {seccion === 'estudios' && <Estudios alVolver={() => setSeccion('menu')} />}
-      {seccion === 'experiencia' && <Experiencia alVolver={() => setSeccion('menu')} />}
-      {seccion === 'habilidades' && <Habilidades alVolver={() => setSeccion('menu')} />}
-      {seccion === 'contacto' && <Contacto alVolver={() => setSeccion('menu')} />}
+      <main className='content-main'>
+        {renderSeccion()}
+      </main>
+
       </div>
-    );
-  }
+      <footer>
+        <center>
+            <p>Teléfono: 3152038741 - Correo: gabrielmeloxvi903@gmail.com</p>
+          </center> 
+      </footer>
+    </div>
+  );
+}      
 
-  <link rel="stylesheet" href="../src/App.css" />
 export default App;

@@ -1,17 +1,127 @@
-header{
-  background-color: '5835AB';
+:root {
+  --fondo-principal: #f8f9fa;
+  --barra-lateral: #240046;
+  --morado-botones: #5a189a;
+  --texto-oscuro: #212529;
+  --texto-suave: #6c757d;
+  --texto-blanco: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fondo-principal);
+  color: var(--texto-oscuro);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 img {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
+  object-fit: cover;
+  padding: 5px;
+  border: 5px solid var(--morado-botones);
+}
+.Cabecera {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--fondo-principal);
+  padding: 15px 20px;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  border-bottom: 2px solid var(--barra-lateral);
 }
 
-.msj{
-  color: 'green';
-  margin-bottom: '15px';
-  font-weight: 'bold';
+.header-txt{
+  color: var(--texto-oscuro);
+  font-size: 1rem;
+  white-space: nowrap;            /* 👈 ¡Esto obliga a tu nombre a quedarse en una sola línea! */
+  margin-right: 20px;
 }
 
-a {
-  padding: 2px;
+.Cabecera button {
+  display: block;
+  padding: 12px 15px;
+  background: none;
+  border: none;
+  color: var(--texto-suave);
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.link_github {
+  color: var(--morado-botones);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 7px;
+}
+
+.link_github:hover {
+  text-decoration: underline;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar-main {
+  width: 260px;
+  background-color: var(--barra-lateral);
+  padding: 30px 20px;
+}
+
+.sidebar-main nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-main button {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  background: none;
+  border: none;
+  color: var(--texto-blanco);
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-main button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.seccion {
+  flex: 1;
+  padding: 50px;
+  background-color: var(--fondo-principal);
+}
+
+.seccion p {
+  color: var(--texto-oscuro);
+}
+
+footer {
+  background-color: var(--fondo-principal);
+  padding: 15px;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  border-top: 2px solid var(--barra-lateral);
+  text-align: center;
 }

@@ -1,7 +1,8 @@
-function Estudios({alVolver}){
+function Estudios(){
     return (
         <div>
-            <section>
+
+            <section class='seccion'>
             <h2>Logros académicos</h2>
             <ul>
                 <li>Tecnólogo en Análisis y Desarrollo de Software</li>
@@ -9,11 +10,6 @@ function Estudios({alVolver}){
             <ul>
                 <li>Técnico en Mantenimiento de equipos de computo</li>
             </ul>
-            <nav>
-                <button onClick={() => alVolver('menu')}>
-                ← Volver
-                </button>
-            </nav>
             </section>
         </div>
     );

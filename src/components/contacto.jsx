@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Contacto({ alVolver }){
+function Contacto(){
     const estadoInicial = {
         nombre: '',
         correo: '',
@@ -52,11 +52,7 @@ async function manejarEnvio (e) {
 };
 
 return (
-    <div>
-        <header class="Cabecera">
-            <p>Gabriel Santiago Melo González</p>
-            <a href="https://github.com/GabrielM7766/curriculum-vitae-react">Enlace Github</a>
-        </header>
+    <div class='seccion'>
     <h2>Contacto</h2>
 
     {mensajeEnviado &&(
@@ -129,7 +125,6 @@ return (
         </form>
 
         <br />
-        <button onClick={alVolver}>← Volver al Menú</button>
     </div>
 );
 }

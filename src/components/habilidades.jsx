@@ -1,7 +1,8 @@
-function Habilidades({alVolver}){
+function Habilidades(){
     return (
         <div>
-            <section>
+
+            <section class='seccion'>
             <h2>Habilidades</h2>
             <ul>
                 <li>Nivel intermedio de Inglés</li>
@@ -12,11 +13,6 @@ function Habilidades({alVolver}){
             <ul>
                 <li>Sentido de la responsabilidad para las diferentes tareas asignadas</li>
             </ul>
-            <nav>
-                <button onClick={() => alVolver('menu')}>
-                ← Volver
-                </button>
-            </nav>
             </section>
         </div>
     );
