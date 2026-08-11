@@ -62,8 +62,8 @@ return (
     )}
 
     <form onSubmit={manejarEnvio}>
-        <div>
-            <label>Nombre:</label> <br />
+        <div class='input_texto'>
+            <label >Nombre:</label> <br />
             <input
                 type="text"
                 name="nombre"
@@ -73,8 +73,8 @@ return (
                 />
         </div>
 
-        <div>
-            <label>Correo Electrónico:</label> <br />
+        <div class='input_texto'>
+            <label >Correo Electrónico:</label> <br />
             <input
             type="email"
             name="correo"
@@ -109,7 +109,7 @@ return (
             </label>
         </div>
 
-        <div>
+        <div className='descripcion'>
             <label>Cuentame la necesidad:</label> <br />
             <textarea
                 name="descripcion"

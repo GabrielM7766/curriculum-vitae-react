@@ -44,7 +44,7 @@ img {
 .header-txt{
   color: var(--texto-oscuro);
   font-size: 1rem;
-  white-space: nowrap;            /* 👈 ¡Esto obliga a tu nombre a quedarse en una sola línea! */
+  white-space: nowrap;
   margin-right: 20px;
 }
 
@@ -124,4 +124,16 @@ footer {
   font-size: 0.9rem;
   border-top: 2px solid var(--barra-lateral);
   text-align: center;
+}
+
+form{
+  border: 1px solid #0f0f0f;
+  border-radius: 5px;
+  padding: 35px;
+}
+
+.input_texto{
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
 }
