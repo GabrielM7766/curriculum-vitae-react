@@ -8,7 +8,8 @@ app.use(cors());
 app.use(express.json());
 
 
-const MONGO_URI = 'mongodb+srv://gabrielm78_db_user:gBsSmRgCpSjeje@cluster0.iwdcipa.mongodb.net/?appName=Cluster0';
+const MONGO_URI = 'mongodb://gabrielm78_db_user:gBsSmRgCpSjeje@ac-zri4qzd-shard-00-00.iwdcipa.mongodb.net:27017,ac-zri4qzd-shard-00-01.iwdcipa.mongodb.net:27017,ac-zri4qzd-shard-00-02.iwdcipa.mongodb.net:27017/?ssl=true&replicaSet=atlas-46obm0-shard-0&authSource=admin&appName=Cluster0';
+
 
 mongoose.connect(MONGO_URI)
     .then(() => console.log('Conectado con éxito a MongoDB Atlas (Nube)'))

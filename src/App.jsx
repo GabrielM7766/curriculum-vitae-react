@@ -11,11 +11,14 @@ function App() {
     <div>
       {seccion === 'menu' && (
         <div>
-          <header>
+          <header class="Cabecera">
+            <p>Gabriel Santiago Melo González -- 
+            <a href="https://github.com/GabrielM7766/curriculum-vitae-react">Enlace Github</a></p>
+          </header>
+        <div>
             <h1>Gabriel Santiago Melo González</h1>
             <p>Aprendiz en Desarrollo de Software</p>
-          </header>
-
+        </div>
           <nav>
             <button onClick={() => setSeccion('perfil')}>
               Perfil profesional
@@ -40,7 +43,7 @@ function App() {
 
         </div>
       )}
-  
+
       {seccion === 'perfil' && <Perfil alVolver={() => setSeccion('menu')} />}
       {seccion === 'estudios' && <Estudios alVolver={() => setSeccion('menu')} />}
       {seccion === 'experiencia' && <Experiencia alVolver={() => setSeccion('menu')} />}
@@ -50,4 +53,5 @@ function App() {
     );
   }
 
+  <link rel="stylesheet" href="../src/App.css" />
 export default App;

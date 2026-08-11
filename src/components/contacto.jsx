@@ -53,10 +53,14 @@ async function manejarEnvio (e) {
 
 return (
     <div>
+        <header class="Cabecera">
+            <p>Gabriel Santiago Melo González</p>
+            <a href="https://github.com/GabrielM7766/curriculum-vitae-react">Enlace Github</a>
+        </header>
     <h2>Contacto</h2>
 
     {mensajeEnviado &&(
-    <div style={{ color: 'green', marginBottom: '15px', fontWeight: 'bold'}}>
+    <div class="msj" style={{ color: 'green', marginBottom: '15px', fontWeight: 'bold'}}>
         ¡ Su mensaje ha sido enviado correctamente !
     </div>
     )}
@@ -90,7 +94,7 @@ return (
                 <input
                 type="radio"
                 name="checklist"
-                value="si"
+                value="true"
                 checked={formData.checklist === 'true'}
                 onChange={manejarCambio}
                 />
@@ -101,7 +105,7 @@ return (
                 <input
                 type="radio"
                 name="checklist"
-                value="no"
+                value="false"
                 checked={formData.checklist === 'false'}
                 onChange={manejarCambio}
                 />
