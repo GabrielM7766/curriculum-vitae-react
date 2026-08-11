@@ -91,7 +91,7 @@ return (
                 type="radio"
                 name="checklist"
                 value="si"
-                checked={formData.checklist === 'si'}
+                checked={formData.checklist === 'true'}
                 onChange={manejarCambio}
                 />
                 Sí
@@ -102,7 +102,7 @@ return (
                 type="radio"
                 name="checklist"
                 value="no"
-                checked={formData.checklist === 'no'}
+                checked={formData.checklist === 'false'}
                 onChange={manejarCambio}
                 />
                 No
