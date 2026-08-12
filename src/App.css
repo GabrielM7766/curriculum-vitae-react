@@ -28,14 +28,15 @@ img {
   padding: 5px;
   border: 5px solid var(--morado-botones);
 }
+
 .Cabecera {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   background-color: var(--fondo-principal);
-  padding: 15px 20px;
+  padding: 15px 40px;
   color: var(--texto-suave);
   font-size: 0.9rem;
   border-bottom: 2px solid var(--barra-lateral);
@@ -44,21 +45,23 @@ img {
 .header-txt{
   color: var(--texto-oscuro);
   font-size: 1rem;
+  font-weight: 700;
   white-space: nowrap;
   margin-right: 20px;
 }
 
 .Cabecera button {
   display: block;
-  padding: 12px 15px;
+  padding: 12px 12px;
   background: none;
   border: none;
-  color: var(--texto-suave);
+  color: var(--texto-blanco);
   text-align: left;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.2s ease;
+  border-radius: 12px;
+  transition: 0.2s ease;
+  background-color: var(--morado-botones)
 }
 
 .link_github {
@@ -99,18 +102,35 @@ img {
   text-align: left;
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.2s ease;
+  border-radius: 12px;
+  transition: 0.2s ease;
 }
 
 .sidebar-main button:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 20px;
+}
+
+.sidebar-main button:active {
+  background-color: var(--morado-botones);
+  font-weight: 600;
 }
 
 .seccion {
+  display: flex;
   flex: 1;
-  padding: 50px;
+  padding: 50px 60px;
   background-color: var(--fondo-principal);
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1000px;
+}
+
+.seccion h2{
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: var(--barra-lateral);
+  position: relative;
 }
 
 .seccion p {
@@ -119,21 +139,237 @@ img {
 
 footer {
   background-color: var(--fondo-principal);
-  padding: 15px;
+  padding: 20px;
   color: var(--texto-suave);
   font-size: 0.9rem;
   border-top: 2px solid var(--barra-lateral);
   text-align: center;
 }
 
-form{
-  border: 1px solid #0f0f0f;
-  border-radius: 5px;
-  padding: 35px;
+/* FORMULARIO DE CONTACTO */
+
+.formulario-contacto {
+    background-color: var(--texto-blanco);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
 }
 
-.input_texto{
-  padding: 5px;
-  border-radius: 5px;
+.form-group {
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--texto-oscuro);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.input_texto {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.input_texto:focus {
+    outline: none;
+    border-color: var(--morado-botones);
+    box-shadow: 0 0 0 3px rgba(90, 24, 154, 0.1);
+}
+
+.descripcion_textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 1rem;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.descripcion_textarea:focus {
+    outline: none;
+    border-color: var(--morado-botones);
+}
+
+.form-group-radios {
+    align-items: flex-start;
+}
+
+.pregunta-servicios {
+    font-weight: 600;
+    color: var(--texto-oscuro);
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.radio-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: normal;
+    color: var(--texto-oscuro);
+}
+
+.radio-label input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--morado-botones);
+}
+
+.form-group-btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn_send {
+    padding: 12px 24px;
+    background-color: var(--morado-botones);
+    color: var(--texto-blanco);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn_send:hover {
+    background-color: #4a148c;
+}
+
+.btn_send:active {
+    transform: scale(0.98);
+}
+
+.msj_exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+.contenedor-tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.tarjeta-contenido {
+  flex: 1;
+}
+
+.tarjeta-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: contain;
+  background-color: var(--fondo-principal);
+  padding: 5px;
+}
+
+@media (max-width: 480px) {
+  .tarjeta-informacion {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .tarjeta-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.tarjeta-informacion {
+  background-color: var(--texto-blanco);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
+}
+
+.tarjeta-informacion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-informacion h3 {
+  margin: 0 0 8px 0;
+  color: var(--texto-oscuro);
+  font-size: 1.2rem;
+}
+
+.tarjeta-informacion h4 {
+  margin: 0 0 10px 0;
+  color: var(--morado-botones);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.tarjeta-informacion p {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.habilidades-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.badge-habilidad {
+  background-color: var(--fondo-principal);
+  color: var(--texto-oscuro);
+  border: 1px solid #e0e0e0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }

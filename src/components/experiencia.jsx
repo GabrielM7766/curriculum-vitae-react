@@ -1,13 +1,20 @@
 function Experiencia(){
     return (
-        <div>
-
-            <section class='seccion'>
+        <div className="seccion">
             <h2>Experiencia laboral</h2>
-            <ul>
-                <li>Asesor de ventas call center</li>
-            </ul>
-            </section>
+            <div className="contenedor-tarjetas">
+
+                <div className="tarjeta-informacion">
+                    <img src="/src/assets/trabajo1.png" alt="trabajo1" className="tarjeta-img"/>
+
+                    <div className="tarjeta-contenido">
+                        <h3>Agente de Ventas Telefónicas</h3>
+                        <h4>IPS Naturista</h4>
+                        <p>Estrategias de retención y recompra enfocadas en cartera de clientes inactivos, logrando el aumento del volumen de ventas por cliente.</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 }

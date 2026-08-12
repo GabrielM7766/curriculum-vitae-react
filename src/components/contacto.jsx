@@ -35,7 +35,6 @@ async function manejarEnvio (e) {
 
         if (respuesta.ok) {
             setMensajeEnviado(true);
-
             setFormData(estadoInicial);
 
             setTimeout(() => {
@@ -43,28 +42,29 @@ async function manejarEnvio (e) {
             },4000);
 
         } else {
-            alert('Hubo un problema al guardar el mensaje');
+            alert('Hubo un problema al guardar el mensaje en el servidor.');
         }
     }catch (error) {
         console.error('Error al conectar con el servidor:', error);
-        alert('No se pudo conectar con el servidor backend')
+        alert('No se pudo conectar con el servidor backend. Asegúrese que esté corriendo.')
     }
 };
 
 return (
-    <div class='seccion'>
+    <div className='seccion'>
     <h2>Contacto</h2>
 
     {mensajeEnviado &&(
-    <div class="msj" style={{ color: 'green', marginBottom: '15px', fontWeight: 'bold'}}>
+    <div className="msj">
         ¡ Su mensaje ha sido enviado correctamente !
     </div>
     )}
 
-    <form onSubmit={manejarEnvio}>
-        <div class='input_texto'>
+    <form onSubmit={manejarEnvio} className='formulario-contacto'>
+        <div className='form-group'>
             <label >Nombre:</label> <br />
             <input
+                class='input_texto'
                 type="text"
                 name="nombre"
                 value={formData.nombre}
@@ -73,58 +73,64 @@ return (
                 />
         </div>
 
-        <div class='input_texto'>
+        <div className='form-group'>
             <label >Correo Electrónico:</label> <br />
             <input
-            type="email"
-            name="correo"
-            value={formData.correo}
-            onChange={manejarCambio}
-            required
-            />
+                class='input_texto'
+                type="email"
+                name="correo"
+                value={formData.correo}
+                onChange={manejarCambio}
+                required
+                />
         </div>
 
-        <div>
-        <p>¿Requiere mis servicios de desarrollador?</p>
-            <label>
-                <input
-                type="radio"
-                name="checklist"
-                value="true"
-                checked={formData.checklist === 'true'}
-                onChange={manejarCambio}
+        <div className='form-group form-group-radios'>
+        <p className='pregunta-servicios'>¿Requiere mis servicios de desarrollador?</p>
+            <div className='radio-options'>
+                <label className='radio-label'>
+                    <input
+                    type="radio"
+                    name="checklist"
+                    value="true"
+                    checked={formData.checklist === 'true'}
+                    onChange={manejarCambio}
+                    required
                 />
                 Sí
             </label>
 
-            <label style={{ marginLeft: '10px' }}>
-                <input
-                type="radio"
-                name="checklist"
-                value="false"
-                checked={formData.checklist === 'false'}
-                onChange={manejarCambio}
-                />
-                No
-            </label>
+                <label className='radio-label'>
+                    <input
+                    type="radio"
+                    name="checklist"
+                    value="false"
+                    checked={formData.checklist === 'false'}
+                    onChange={manejarCambio}
+                    />
+                    No
+                </label>
+            </div>
         </div>
 
-        <div className='descripcion'>
-            <label>Cuentame la necesidad:</label> <br />
+        <div className='form-group'>
+            <label htmlFor='descripcion'>Cuentame la necesidad:</label> <br />
             <textarea
+                id='descripcion'
                 name="descripcion"
+                className='descripcion_textarea'
                 value={formData.descripcion}
                 onChange={manejarCambio}
-                rows='4'
+                rows='5'
                 required
+                placeholder='Describe brevemente tu proyecto o consulta...'
             />
         </div>
 
-        <button type="submit">Enviar Mensaje</button>
-        
-        </form>
-
-        <br />
+        <div className='form-group-btn'>
+            <button className='btn_send' type='submit'>Enviar Mensaje</button>
+        </div>
+    </form>
     </div>
 );
 }
