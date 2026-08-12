@@ -1,16 +1,40 @@
-# React + Vite
+# 📄 Interactive Curriculum Vitae - React & Node.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+¡Bienvenido a mi proyecto de hoja de vida interactiva! Esta es una aplicación web full-stack desarrollada para presentar mi perfil profesional, logros académicos y trayectoria laboral de una manera dinámica y moderna.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tecnologías Utilizadas
 
-## React Compiler
+### Frontend
+* **React.js** (Estructura de componentes dinámicos y manejo de estados).
+* **CSS3** (Diseño personalizado basado en una paleta minimalista elegante con tonos morados).
+* **Flexbox** (Diseño adaptable y alineación de interfaces).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend & Base de Datos
+* **Node.js & Express** (Servidor API REST para la gestión de mensajes).
+* **MongoDB Atlas** (Base de Datos NoSQL en la nube).
+* **Mongoose** (Modelado de datos y esquemas).
+* **Cors** (Control de acceso HTTP).
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🚀 Características Principales
+
+* **Navegación Dinámica sin Recarga:** Menú lateral interactivo que alterna entre secciones (Perfil, Estudios, Experiencia, Habilidades, Contacto) de forma instantánea usando estados de React.
+* **Formulario de Contacto Funcional:** Los visitantes pueden enviar mensajes que se procesan a través del backend y se almacenan automáticamente en la nube de MongoDB Atlas.
+* **Diseño Limpio:** Interfaz enfocada en la legibilidad y la experiencia de usuario.
+
+---
+
+## 🔧 Instalación y Configuración
+
+Para instalar el proyecto de forma local es necesario seguir los siguientes pasos:
+
+### Prerequisites
+Asegúrate de tener instalado [Node.js](https://nodejs.org/) en tu equipo.
+
+### 1. Clonar el repositorio
+```bash
+git clone [https://github.com/GabrielM7766/curriculum-vitae-react.git](https://github.com/GabrielM7766/curriculum-vitae-react.git)
+cd curriculum-vitae-react
