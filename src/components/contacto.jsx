@@ -55,7 +55,7 @@ return (
     <h2>Contacto</h2>
 
     {mensajeEnviado &&(
-    <div className="msj">
+    <div className="msj_exito">
         ¡ Su mensaje ha sido enviado correctamente !
     </div>
     )}

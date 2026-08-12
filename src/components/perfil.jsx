@@ -1,14 +1,18 @@
 function Perfil(){
     return (
-        <div>
+        <div className="seccion">
+            <h2>Perfil profesional</h2>
+            <div className="perfil-contenedor">
+                <img src="/src/assets/icon.png" alt="Profile Picture" className="perfil-foto"/>
+                <div className="perfil-texto">
+                    <p>
+                        Estudiante del programa Tecnólogo Análisis y Desarrollo de Software con solidos conocimientos en programación, lógica computacional, y soporte técnico
+                    </p>
+                </div>
 
-            <section class='seccion'>
-                <h2>Perfil profesional</h2>
-                <img src="/src/assets/icon.png" alt="Profile Picture"/><br/>
-                <p>Estudiante del programa Tecnólogo Análisis y Desarrollo de Software con solidos conocimientos en programación, lógica computacional, y soporte técnico</p>
-            </section>
+            </div>
         </div>
     );
 }
 
-export default Perfil;
+export default Perfil;  

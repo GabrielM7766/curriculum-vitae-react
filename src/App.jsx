@@ -7,7 +7,7 @@ import Habilidades from './components/habilidades.jsx';
 import Contacto from './components/contacto.jsx';
 import './App.css'
 
-function App() {
+function App() { 
   const [seccion, setSeccion] = useState('inicio');
 
   const renderSeccion = () => {
@@ -39,7 +39,7 @@ function App() {
             Gabriel Santiago Melo González
           </span>
 
-          <a className='link-github' href="https://github.com/GabrielM7766/curriculum-vitae-react" target='_blank' rel="noreferrer">
+          <a className='link_github' href="https://github.com/GabrielM7766/curriculum-vitae-react" target='_blank' rel="noreferrer">
             Enlace Github
           </a>
           </header>
