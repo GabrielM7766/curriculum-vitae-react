@@ -1,4 +1,4 @@
-# 📄 Interactive Curriculum Vitae - React & Node.js
+# 📄 Curriculum Vitae Interactivo - React & Node.js
 
 ¡Bienvenido a mi proyecto de hoja de vida interactiva! Esta es una aplicación web full-stack desarrollada para presentar mi perfil profesional, logros académicos y trayectoria laboral de una manera dinámica y moderna.
 
